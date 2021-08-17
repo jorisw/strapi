@@ -23,8 +23,8 @@ module.exports = function(strapi) {
         actions: {},
         lifecycles: {},
       };
-      ct.schema.info = {};
-      ct.schema.info.displayName = camelCase(modelName);
+
+      ct.schema.info.displayName = model.info.name;
       ct.schema.info.singularName = camelCase(modelName);
       ct.schema.info.pluralName = `${camelCase(modelName)}s`;
 
@@ -122,6 +122,7 @@ module.exports = function(strapi) {
     _.forEach(plugin.middlewares, (middleware, middlewareUID) => {
       const middlewareName = toLower(middlewareUID.split('.')[1]);
       strapi.plugins[pluginName].middlewares[middlewareName] = middleware;
+      strapi.middleware[middlewareName] = middleware;
     });
 
     _.forEach(plugin.controllers, (controller, controllerUID) => {

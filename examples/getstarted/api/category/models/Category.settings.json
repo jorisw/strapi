@@ -3,7 +3,10 @@
   "collectionName": "categories",
   "info": {
     "name": "category",
-    "description": ""
+    "description": "",
+    "displayName": "category",
+    "singularName": "category",
+    "pluralName": "categorys"
   },
   "options": {
     "draftAndPublish": true,
@@ -18,6 +21,12 @@
       "relation": "manyToMany",
       "target": "api::address.address",
       "mappedBy": "categories"
+    },
+    "countries": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::country.country",
+      "inversedBy": "categories"
     }
   }
 }

@@ -67,7 +67,7 @@ describe('Upload plugin end to end tests', () => {
   });
 
   describe('POST /upload => Upload a file', () => {
-    test('Simple image upload', async () => {
+    test.only('Simple image upload', async () => {
       const res = await rq({
         method: 'POST',
         url: '/upload',

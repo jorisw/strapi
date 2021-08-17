@@ -79,6 +79,21 @@
     },
     "dddd": {
       "type": "string"
+    },
+    "eeee": {
+      "type": "string"
+    },
+    "fff": {
+      "type": "string"
+    },
+    "gggg": {
+      "type": "string"
+    },
+    "hhhh": {
+      "type": "string"
+    },
+    "iiii": {
+      "type": "string"
     }
   }
 }
